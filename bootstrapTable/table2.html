@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+body {
+	background: #121212;
+	font-family: sans-serif;
+	color: #ccc;
+	padding: 15px
+}
+
+.table>thead>tr>th {
+	border-bottom: none;
+}
+
+.exotic-table {
+	color: #fff;
+	background: #191919;
+	text-align: center;
+	border: none;
+}
+
+.exotic-table thead tr {
+	border: 2px #333 outset;
+	text-align: center;
+}
+
+.exotic-table thead>tr>th {
+	text-align: center;
+}
+
+.exotic-table tbody {
+	border: 2px outset #333;
+	border-top: none
+}
+
+.exotic-table tbody tr {
+	background: #222;
+}
+
+.exotic-table tbody tr:hover {
+	box-shadow: 0 0 20px #000;
+	background: #1a1a1a;
+}
+
+.exotic-table tbody tr td {
+	border-bottom: 2px outset #333;
+}
+
+.table-responsive {
+	border: none;
+}
+
+.popover {
+	color: #000
+}
+
+a.td-price {
+	color: #fff;
+	border-bottom: 1px dotted #ccc
+}
+
+.green {
+	color: #47e900
+}
+
+.red {
+	color: #f00808
+}
+
+.paleyellow {
+	color: #f8d97c
+}
+
+.purple {
+	color: #b461ff
+}
+
+.turquoise {
+	color: #52edff
+}
+</style>
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
+	rel='stylesheet' type='text/css'>
+<script src="https://code.jquery.com/jquery-2.2.4.js">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="table-responsive">
+				<table id="main-table" class="table exotic-table">
+					<thead>
+						<tr class="text-center">
+							<th>INFO</th>
+							<th>Time Zone</th>
+							<th>Weather</th>
+							<th>Temperature</th>
+							<th>Temp(F)</th>
+							<th>Temp(C)</th>
+							<th>Humidity</th>
+							<th>Wind</th>
+							<th>DewPoint</th>
+							<th>Updated Date</th>
+							<th>Time</th>
+							<th>View Web</th>
+						</tr>
+					</thead>
+					<tbody class="text-center">
+						<tr>
+							<td><span class="glyphicon glyphicon-check purple"></span></td>
+							<td>should</td>
+							<td>come</td>
+							<td><span class="glyphicon glyphicon-ok green"></span></td>
+							<td>to</td>
+							<td>fill</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<script>
+			$(document).ready(function() {
+				$('[data-toggle="popover"]').popover({
+					title : "Payment Modes",
+					html : true,
+					placement : "left"
+				});
+			});
+		</script>
+	</div>
+</body>
+</html>

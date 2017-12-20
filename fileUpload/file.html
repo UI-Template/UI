@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="my.css">
+</head>
+<body>
+	<div class="container">
+		<div class="contr" align="center">
+			<h2>You can select the file and click Upload button</h2>
+		</div>
+
+		<div class="upload_form_cont" align="center">
+			<form id="upload_form" enctype="multipart/form-data" method="post"
+				action="/">
+				<div>
+					<div>
+						<label for="image_file">Please select image file</label>
+					</div>
+					<div>
+						<input type="file" name="image_file" id="image_file" />
+					</div>
+				</div>
+				<div>
+					<input type="button" value="Upload" onclick="startUploading()" />
+				</div>
+			</form>
+
+			<img id="preview" />
+		</div>
+	</div>
+</body>
+
+
+</html>

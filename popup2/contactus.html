@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+::-moz-selection {
+	background: steelblue;
+	color: white;
+}
+
+::selection {
+	background: steelblue;
+	color: white;
+}
+
+.heavyTable {
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	animation: float 5s infinite;
+}
+
+.main {
+	max-width: 530px;
+	padding: 10px;
+	margin: auto;
+}
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: white
+}
+
+/* Modal Content */
+.modal-content {
+	background-color: rgba(254, 254, 254, 0.87);
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 25%;
+	height: 85px;
+}
+
+/* The Close Button */
+.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+input[type=text] {
+	width: 75%;
+	padding: 12px 27px;
+	margin: -1px 0;
+	box-sizing: border-box;
+	border: 2px solid rgba(37, 10, 10, 0.47);
+	border-radius: 40px;
+}
+/* 
+new forpopup */
+/* body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	padding: 50px;
+	background: rgba(0, 0, 0, .2);
+} */
+#modal {
+	/* basic */
+	background-color: #fff;
+	margin: 0 auto;
+	width: 210px;
+	padding: 30px;
+	text-align: center;
+	/* border-radius */
+	border-radius: 12px;
+	color: white;
+	/* box-shadow */
+	-webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 10px, rgba(0, 0, 0, .75)
+		0 0 70px inset;
+	-moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 10px, rgba(0, 0, 0, .75) 0 0
+		70px inset;
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 10px, rgba(0, 0, 0, .75) 0 0 70px
+		inset;
+	background: #7d7e7d;
+	background: -moz-linear-gradient(top, #7d7e7d, #0e0e0e);
+	background: -webkit-linear-gradient(top, #7d7e7d, #0e0e0e);
+	background: -ms-linear-gradient(top, #7d7e7d, #0e0e0e);
+	background: -o-linear-gradient(top, #7d7e7d, #0e0e0e);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d',
+		endColorstr='#0e0e0e', GradientType=0);
+	background: linear-gradient(to bottom, #7d7e7d, #0e0e0e);
+	border-top: 1px solid #666;
+	overflow: hidden;
+}
+
+#modal h1 {
+	text-align: left;
+	margin: 0;
+	font-size: 25px;
+	letter-spacing: -1px;
+	margin-bottom: 4px;
+	text-shadow: 0 -1px 1px #000, 0 0px 5px rgba(0, 0, 0, .25);
+}
+
+#modal p {
+	margin-top: 7px 0 25px;
+	color: #ccc;
+	font-size: 13px;
+	text-align: left;
+	text-shadow: 0 0px 5px rgba(0, 0, 0, .25), 0 -1px 1px #000;
+}
+
+.yes {
+	background: green;
+	display: block;
+	padding: 15px 35px;
+	float: center;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	text-shadow: 0 0 10px #000;
+	border-top: 1px solid rgb(200, 250, 100);
+	font-size: 20px;
+	-webkit-box-shadow: rgba(255, 255, 255, .3) 0 2px 1px, rgba(0, 0, 0, .3)
+		0 -2px 1px, rgba(0, 0, 0, 0.5) 0px 3px 10px, rgba(0, 50, 0, .75) 0 0
+		40px inset;
+	-moz-box-shadow: rgba(255, 255, 255, .3) 0 2px 1px, rgba(0, 0, 0, .3) 0
+		-2px 1px, rgba(0, 0, 0, 0.5) 0px 3px 10px, rgba(0, 50, 0, .75) 0 0
+		40px inset;
+	box-shadow: rgba(255, 255, 255, .3) 0 2px 1px, rgba(0, 0, 0, .3) 0 -2px
+		1px, rgba(0, 0, 0, 0.5) 0px 3px 10px, rgba(0, 50, 0, .75) 0 0 40px
+		inset;
+	border-radius: 12px;
+	background: #bfd255;
+	background: -webkit-linear-gradient(top, #bfd255 0%, #8eb92a 50%, #72aa00 51%,
+		#9ecb2d 100%);
+	background: -moz-linear-gradient(top, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d
+		100%);
+	background: -ms-linear-gradient(top, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d
+		100%);
+	background: -o-linear-gradient(top, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d
+		100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255',
+		endColorstr='#9ecb2d', GradientType=0);
+	background: linear-gradient(to bottom, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d
+		100%);
+}
+
+.no {
+	background: red;
+	display: block;
+	padding: 15px 35px;
+	float: center;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	border-top: 1px solid rgb(250, 150, 100);
+	font-weight: bold;
+	-webkit-box-shadow: rgba(255, 255, 255, .3) 0 2px 1px, rgba(0, 0, 0, .3)
+		0 -2px 1px, rgba(0, 0, 0, 0.5) 0px 3px 10px, rgba(100, 0, 0, .75) 0 0
+		40px inset;
+	-moz-box-shadow: rgba(255, 255, 255, .3) 0 2px 1px, rgba(0, 0, 0, .3) 0
+		-2px 1px, rgba(0, 0, 0, 0.5) 0px 3px 10px, rgba(100, 0, 0, .75) 0 0
+		40px inset;
+	box-shadow: rgba(255, 255, 255, .3) 0 2px 1px, rgba(0, 0, 0, .3) 0 -2px
+		1px, rgba(0, 0, 0, 0.5) 0px 3px 10px, rgba(100, 0, 0, .75) 0 0 40px
+		inset;
+	text-shadow: 0 0 10px #000;
+	border-radius: 12px;
+	background: #f3c5bd;
+	background: -webkit-linear-gradient(top, #f3c5bd 0%, #e86c57 50%, #ea2803 51%,
+		#ff6600 100%);
+	background: -moz-linear-gradient(top, #f3c5bd 0%, #e86c57 50%, #ea2803 51%, #ff6600
+		100%);
+	background: -ms-linear-gradient(top, #f3c5bd 0%, #e86c57 50%, #ea2803 51%, #ff6600
+		100%);
+	background: -o-linear-gradient(top, #f3c5bd 0%, #e86c57 50%, #ea2803 51%, #ff6600
+		100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3c5bd',
+		endColorstr='#ff6600', GradientType=0);
+	background: linear-gradient(to bottom, #f3c5bd 0%, #e86c57 50%, #ea2803 51%, #ff6600
+		100%);
+}
+
+a:active {
+	position: relative;
+	top: 3px;
+}
+</style>
+</head>
+<body>
+
+	<!-- Trigger/Open The Modal -->
+	<div align="center">
+		<button id="myBtn">Contact us</button>
+	</div>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<div id="modal">
+			<h1>Contact Details.</h1>
+			<p>Name : Basant Hota</p>
+			<p>Email :techbasanta757@gmail.com</p>
+			<p>Mobile :101</p>
+			<p>
+				Facebook : <a href="https://www.facebook.com/dugulu"
+					style="color: lavender; text-decoration: none; font-family: monospace;">click
+					here</a>
+			</p>
+			<br />
+			<p>Did you Like my Application ?</p>
+			<a class="yes" href="javascript:void(0);">Like</a> <br /> <a
+				class="no" href="javascript:void(0);">Dislike</a>
+		</div>
+	</div>
+
+
+	<script>
+		// Get the modal
+		var modal = document.getElementById('myModal');
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("myBtn");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal 
+		btn.onclick = function() {
+			modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+			modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+</body>
+</html>

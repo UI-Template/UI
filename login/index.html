@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>News-API</title>
+<link rel="stylesheet" href="css/style.css">
+<style type="text/css">
+select option {
+	background: rgba(101, 101, 98, 0.48);
+	color: rgba(40, 38, 38, 0.92);
+	box-shadow: inset 20px 20px #f00;
+}
+
+select option:hover {
+	color: #000;
+	box-shadow: inset 20px 20px #00f;
+}
+</style>
+</head>
+
+<body>
+
+	<div class="form">
+		<div class="forceColor"></div>
+		<form>
+			<div class="topbar">
+				<div class="spanColor"></div>
+				<input type="text" class="input" id="password"
+					placeholder="Media Source " /> <input type="text" class="input"
+					id="password" placeholder="Sort By" /> <select name="sortBy"
+					class="input">
+					<option value="etv">ETV</option>
+					<option value="otv">OTV</option>
+				</select>
+			</div>
+			<button class="submit" id="submit">Subscribe News</button>
+		</form>
+	</div>
+</body>
+</html>
